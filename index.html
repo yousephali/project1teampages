@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eloheh Healthcare – Team Site</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e4ec);
+      color: #333;
+    }
+    header {
+      background-color: #004d66;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 { margin: 0; font-size: 2em; }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 { color: #004d66; margin-top: 0; }
+    ul, ol { padding-left: 1.2rem; }
+    a { color: #004d66; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .link-button {
+      display: inline-block; padding: 10px 20px; margin: 10px 5px 10px 0;
+      background-color: #ff5722; color: #fff !important; text-decoration: none;
+      font-weight: bold; border-radius: 8px; transition: background-color 0.3s ease;
+    }
+    .link-button:hover { background-color: #e64a19; }
+    footer { text-align: center; font-size: 0.9em; margin: 20px 0; color: #555; }
+
+    /* Left nav specifics */
+    .nav {
+      background: #fff; padding: 0; margin: 0;
+    }
+    .nav h2 { margin: 0; padding: 16px 12px; color: #fff; background: #004d66; }
+    .nav a {
+      display: block; padding: 12px 14px; text-decoration: none; color: #004d66; font-weight: 600;
+      border-bottom: 1px solid #e9eef2;
+    }
+    .nav a:hover { background: #d9e4ec; }
+    .nav footer { margin: 8px 0 12px; }
+  </style>
+</head>
+
+<frameset cols="25%,75%">
+  <!-- Left frame -->
+  <frame name="leftFrame" srcdoc='
+    <!DOCTYPE html>
+    <html lang="en"><head><meta charset="UTF-8">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="">
+    <style>*{box-sizing:border-box}body{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0}h2{margin:0;padding:16px 12px;color:#fff;background:#004d66}.nav a{display:block;padding:12px 14px;text-decoration:none;color:#004d66;font-weight:600;border-bottom:1px solid #e9eef2}.nav a:hover{background:#d9e4ec}footer{text-align:center;font-size:0.9em;color:#555;margin:8px 0 12px}</style>
+    </head><body>
+    <div class="nav">
+      <h2>Navigation</h2>
+      <a href="#home" target="rightFrame">Home</a>
+      <a href="#about" target="rightFrame">About</a>
+      <a href="#projects" target="rightFrame">Projects</a>
+      <a href="#contact" target="rightFrame">Contact</a>
+      <footer>
+        Last Modified: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script>
+      </footer>
+    </div>
+    </body></html>'>
+  </frame>
+
+  <!-- Right frame -->
+  <frame name="rightFrame" srcdoc='
+    <!DOCTYPE html>
+    <html lang="en"><head><meta charset="UTF-8">
+    <title>Team Home</title>
+    <style>
+      body{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;background:linear-gradient(135deg,#f0f4f8,#d9e4ec);color:#333}
+      header{background-color:#004d66;color:#fff;text-align:center;padding:20px}
+      header h1{margin:0;font-size:2em}
+      main{max-width:900px;margin:20px auto;padding:20px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+      h2{color:#004d66;margin-top:0}footer{text-align:center;font-size:0.9em;margin:20px 0;color:#555}
+    </style></head><body>
+    <header>
+      <h1><u>Eloheh</u> Healthcare</h1>
+      <p><i>Team Home Page</i></p>
+    </header>
+    <main>
+      <h2>Team Number: <b>3</b></h2>
+      <h2>Team Members</h2>
+      <ul>
+        <li>Youseph Ali</li>
+        <li>Carter Eley</li>
+        <li>Natalie Constant</li>
+        <li>Karleigh Shick</li>
+        <li>Gavin McMahon</li>
+      </ul>
+      <p>Explore our work using the navigation on the left. The left panel stays visible while pages load on the right.</p>
+      <a name="about"></a>
+      <h2>About</h2>
+      <p>Eloheh began as a group of healthcare professionals determined to make quality care accessible to everyone.</p>
+      <ol>
+        <li>1999 — Founded in Indianapolis</li>
+        <li>2005 — Launched telehealth services</li>
+        <li>2015 — Expanded internationally</li>
+        <li>2022 — Recognized for digital health innovation</li>
+      </ol>
+      <a class="link-button" href="https://www.who.int" target="_blank">World Health Organization</a>
+      <a name="projects"></a>
+      <h2>Projects</h2>
+      <ul>
+        <li>Telehealth access expansion</li>
+        <li>AI triage pilot</li>
+        <li>Community wellness outreach</li>
+      </ul>
+      <a name="contact"></a>
+      <h2>Contact</h2>
+      <p>
+        Email our coordinator:
+        <a class="link-button" href="mailto:carter@example.com">Contact Carter</a>
+      </p>
+      <p>
+        Download our brochure:
+        <a class="link-button" href="Eloheh_Brochure.pdf" download>Download Brochure</a>
+      </p>
+    </main>
+    <footer>
+      Last Modified: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script>
+    </footer>
+    </body></html>'>
+  </frame>
+</frameset>
+</html>
